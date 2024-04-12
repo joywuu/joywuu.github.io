@@ -279,7 +279,7 @@ function getSphereObject(radius = 0.2, color, x = 0, y = 0, z = 0, num = false) 
  */
 function onDocumentMouseMove(event) {
     mouseX = event.clientX - windowHalfX;
-    mouseY = event.clientY - windowHalfY;
+    // mouseY = event.clientY - windowHalfY;
 }
 
 /**
@@ -290,7 +290,7 @@ function onDocumentTouchStart(event) {
     if (event.touches.length === 1) {
         event.preventDefault();
         mouseX = event.touches[0].pageX - windowHalfX;
-        mouseY = event.touches[0].pageY - windowHalfY;
+        // mouseY = event.touches[0].pageY - windowHalfY;
     }
 }
 
@@ -302,7 +302,7 @@ function onDocumentTouchMove(event) {
     if (event.touches.length === 1) {
         event.preventDefault();
         mouseX = event.touches[0].pageX - windowHalfX;
-        mouseY = event.touches[0].pageY - windowHalfY;
+        // mouseY = event.touches[0].pageY - windowHalfY;
     }
 }
 
