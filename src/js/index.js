@@ -166,9 +166,10 @@ function loadModel() {
  * 创建金字塔
  */
 function createPyramid() {
+    let colors =  ["#FFE254", "#F2A3AD"]
     for (let index = 0; index < 12; index++) {
         const geometry = new THREE.CylinderGeometry(0, 300, 300, 4);
-        const material = new THREE.MeshMatcapMaterial({color: 0xF2A3AD});
+        const material = new THREE.MeshMatcapMaterial({color:  new THREE.Color(colors[Math.floor(Math.random() * colors.length)])});
         const mesh = new THREE.Mesh(geometry, material);
         mesh.rotation.x = -Math.random() * Math.PI;
         mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), 1200, Math.random() * 80 * spacing - ((amountY * spacing) / 2));
