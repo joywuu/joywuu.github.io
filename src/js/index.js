@@ -31,7 +31,8 @@ const amountX = 80;
 const amountY = 80;
 const spacing = 100;
 let mouseX = 220;
-let mouseY = -587;
+// let mouseY = -587;
+let mouseY = -487;
 
 // 海面漂浮球体数量
 let ballCount = 0;
@@ -65,7 +66,7 @@ const ballConfig = {
 // 创建相机
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
 // 设置相机位置和角度
-camera.position.z = 2000;
+camera.position.z = 1000;
 
 // 创建场景
 let scene = new THREE.Scene();
@@ -170,7 +171,7 @@ function createPyramid() {
         const material = new THREE.MeshMatcapMaterial({color: 0xF2A3AD});
         const mesh = new THREE.Mesh(geometry, material);
         mesh.rotation.x = -Math.random() * Math.PI;
-        mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), 1000, Math.random() * 80 * spacing - ((amountY * spacing) / 2));
+        mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), 1200, Math.random() * 80 * spacing - ((amountY * spacing) / 2));
         scene.add(mesh);
     }
 }
@@ -220,7 +221,8 @@ function createFont(messages, add = false, fun) {
  */
 function createPoint(vertices) {
 
-    let colors =  ["#5ABDE1", "#98EDE2"]
+    // let colors =  ["#5ABDE1", "#98EDE2"]
+    let colors =  ["#fc1739", "#0250f6"]
     // 创建材质
     let material = new THREE.PointsMaterial({
         color: new THREE.Color(colors[Math.floor(Math.random() * colors.length)]),
