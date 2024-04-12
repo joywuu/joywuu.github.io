@@ -131,7 +131,7 @@ a, button, input, select {
     position: absolute;
     height: 1080px;
     width: 800px;
-    top: 50px;
+    top: 200px;
     left: 100px;
     opacity: 1;
     z-index: 1;
@@ -208,6 +208,7 @@ a, button, input, select {
     width: 300px;
     white-space: normal;
     font-size: 14px;
+    color: #E5E5E5;
     font-family: "AnonymousPro", Arial, sans-serif;
 }
 
