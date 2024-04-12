@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {FontLoader} from 'three/addons/loaders/FontLoader.js';
 import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
 import { OBJLoader} from 'three/addons/loaders/OBJLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 
 const canvas = document.getElementById('three-container');
@@ -77,9 +78,9 @@ renderer.setSize(width, height);
 
 canvas.appendChild(renderer.domElement)
 //
-// let orbitControls = new OrbitControls(camera, renderer.domElement);
-// orbitControls.enabled = true;
-// orbitControls.enableDamping = true;
+let orbitControls = new OrbitControls(camera, renderer.domElement);
+orbitControls.enabled = true;
+orbitControls.enableDamping = true;
 
 // 添加输入框事件
 const inputDom = document.getElementById("myInput");
