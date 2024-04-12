@@ -1,3 +1,15 @@
+
+@font-face {
+    font-family: "Unifont";
+    src: url("../../font/balgintxt.ttf");
+}
+
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("../../font/Anonymous_Pro.ttf");
+}
+
+
 html {
     overflow: visible ! important;
 }
@@ -188,6 +200,7 @@ a, button, input, select {
     width: 400px;
     font-size: 32px;
     line-height: 40px;
+    font-family: "Unifont" ,Monospace;
 }
 
 .ai_text {
@@ -195,6 +208,6 @@ a, button, input, select {
     width: 300px;
     white-space: normal;
     font-size: 14px;
-    font-family: Arial, sans-serif;
+    font-family: "AnonymousPro", Arial, sans-serif;
 }
 
