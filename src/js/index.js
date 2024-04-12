@@ -16,7 +16,7 @@ canvas.style.height = '100%';
 canvas.style.overflow = 'hidden';
 
 // 将body元素的溢出属性设置为“滚动”，以允许页面上的其他元素滚动。
-document.body.style.overflowY = 'scroll';
+// document.body.style.overflowY = 'scroll';
 
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
