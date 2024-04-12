@@ -1,0 +1,200 @@
+html {
+    overflow: visible ! important;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Monospace;
+    font-size: 13px;
+    line-height: 24px;
+    height: 100vh;
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+a, button, input, select {
+    pointer-events: auto;
+}
+
+
+#overlay {
+    position: absolute;
+    font-size: 16px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0,0,0,0.7);
+}
+
+#overlay button {
+    background: transparent;
+    border: 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#notSupported {
+    width: 50%;
+    margin: auto;
+    background-color: #f00;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.text {
+    font-size: 6vw;
+    word-spacing: 0.2em;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1em;
+    border-bottom: 1vw solid #0e6dad;
+    position:relative;
+    line-height: 1.2em;
+}
+
+#overlay-canvas {
+    pointer-events: none;
+    z-index: 1;
+}
+
+#overlay-canvas .interactive-area {
+    /* CSS styles for the interactive area of canvas 1 */
+    pointer-events: auto;
+}
+
+#three-container {
+    overflow: hidden;
+    pointer-events: auto;
+    z-index: 0;
+}
+
+.button {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: #fff;
+    border-width: 2px;
+}
+
+#button_1 {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+    z-index: 2;
+}
+
+#button_2 {
+    position: absolute;
+    top: 210px;
+    right: 100px;
+    z-index: 2;
+}
+
+#button_3 {
+    position: absolute;
+    top: 3560px;
+    right: 100px;
+    z-index: 2;
+}
+
+#container {
+    position: absolute;
+    height: 1080px;
+    width: 800px;
+    top: 50px;
+    left: 100px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.container-input {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.container-input input {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 1px 16px;
+    background: transparent;
+    border: 1px solid #eee;
+    color: white;
+    font-size: 18px;
+}
+
+.container-input input:focus {
+    border: 1px solid #03a9f4;
+    box-shadow: 0 0 15px #03a9f4;
+}
+
+
+#container2 {
+    position: absolute;
+    height: 2000px;
+    width: 400px;
+    top: 200px;
+    right: 50px;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+#container {
+    position: absolute;
+    height: auto;
+    width: 400px;
+    bottom: 100px;
+    right: 50px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.my_text {
+    text-transform: uppercase;
+    width: 400px;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.ai_text {
+    /* right: 0; */
+    width: 300px;
+    white-space: normal;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
