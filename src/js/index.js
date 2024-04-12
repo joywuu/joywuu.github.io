@@ -1,7 +1,8 @@
 import * as THREE from 'three';
-import {OBJLoader} from 'three/addons/loaders/OBJLoader.js';
 import {FontLoader} from 'three/addons/loaders/FontLoader.js';
 import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
+import { OBJLoader} from 'three/addons/loaders/OBJLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
 
 const canvas = document.getElementById('three-container');
@@ -42,8 +43,8 @@ let counts = [];
 let particles = new Array();
 let particle;
 
-const fontColors = ['#5ABDE1', '#98EDE2', '#FF8F49', '#FFE254',
-    '#F2A3AD', '#E5E5E5', '#414141']
+const fontColors = [
+     '#E5E5E5']
 
 const ballConfig = {
     // 数量
@@ -58,13 +59,13 @@ const ballConfig = {
     // 小球半径
     ballRadius: 5,
     // 颜色
-    color: 0xE5E5E5
+    color: 0x5ABDE1
 };
 
 // 创建相机
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
 // 设置相机位置和角度
-camera.position.z = 1000;
+camera.position.z = 2000;
 
 // 创建场景
 let scene = new THREE.Scene();
@@ -75,6 +76,10 @@ let renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(width, height);
 
 canvas.appendChild(renderer.domElement)
+
+// let orbitControls = new OrbitControls(camera, renderer.domElement);
+// orbitControls.enabled = true;
+// orbitControls.enableDamping = true;
 
 // 添加输入框事件
 const inputDom = document.getElementById("myInput");
@@ -150,7 +155,7 @@ function loadModel() {
             let mesh = createPoint(vertices);
             // mesh.rotation.x = -0.5 * Math.PI;
             mesh.scale.set(1, 1, 1);
-            mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), -60 - Math.random() * 250, Math.random() * 80 * spacing - ((amountY * spacing) / 2))
+            mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), -1000 - Math.random() * 250, Math.random() * 80 * spacing - ((amountY * spacing) / 2))
             scene.add(mesh);
         })
     }
@@ -162,10 +167,10 @@ function loadModel() {
 function createPyramid() {
     for (let index = 0; index < 12; index++) {
         const geometry = new THREE.CylinderGeometry(0, 300, 300, 4);
-        const material = new THREE.MeshMatcapMaterial({color: 0xFF8F49});
+        const material = new THREE.MeshMatcapMaterial({color: 0xF2A3AD});
         const mesh = new THREE.Mesh(geometry, material);
         mesh.rotation.x = -Math.random() * Math.PI;
-        mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), 400, Math.random() * 80 * spacing - ((amountY * spacing) / 2));
+        mesh.position.set(Math.random() * 80 * spacing - ((amountX * spacing) / 2), 1000, Math.random() * 80 * spacing - ((amountY * spacing) / 2));
         scene.add(mesh);
     }
 }
@@ -246,7 +251,7 @@ function getSphereObject(radius = 0.2, color, x = 0, y = 0, z = 0, num = false) 
 
     if (ballCount <= 40 && num) {
         radius = 100 + Math.floor(Math.random() * 50);
-        color = 0xFF8F49;
+        color = 0xFFE254;
         ballCount++;
     }
 
@@ -331,6 +336,7 @@ function render() {
 function animation() {
     requestAnimationFrame(animation);
     render();
+    // orbitControls.update()
     renderer.render(scene, camera);
 }
 
