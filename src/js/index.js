@@ -221,8 +221,8 @@ function createFont(messages, add = false, fun) {
  */
 function createPoint(vertices) {
 
-    // let colors =  ["#5ABDE1", "#98EDE2"]
-    let colors =  ["#fc1739", "#0250f6"]
+    let colors =  ["#5ABDE1", "#98EDE2"]
+    // let colors =  ["#fc1739", "#0250f6"]
     // 创建材质
     let material = new THREE.PointsMaterial({
         color: new THREE.Color(colors[Math.floor(Math.random() * colors.length)]),
