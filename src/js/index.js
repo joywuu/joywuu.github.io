@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import {FontLoader} from 'three/addons/loaders/FontLoader.js';
 import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
 import { OBJLoader} from 'three/addons/loaders/OBJLoader.js';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
 
 const canvas = document.getElementById('three-container');
@@ -77,7 +76,7 @@ let renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(width, height);
 
 canvas.appendChild(renderer.domElement)
-
+//
 // let orbitControls = new OrbitControls(camera, renderer.domElement);
 // orbitControls.enabled = true;
 // orbitControls.enableDamping = true;
@@ -166,7 +165,7 @@ function loadModel() {
  * 创建金字塔
  */
 function createPyramid() {
-    let colors =  ["#FFE254", "#F2A3AD","#FFE254", "#F2A3AD"]
+    let colors =  ["#FFA500", "#F2A3AD","#FFA500", "#F2A3AD"]
     for (let index = 0; index < 12; index++) {
         const geometry = new THREE.CylinderGeometry(0, 300, 300, 4);
         const material = new THREE.MeshMatcapMaterial({color:  new THREE.Color(colors[Math.floor(Math.random() * colors.length)])});
