@@ -182,7 +182,7 @@ function createPyramid() {
  */
 function createFont(messages, add = false, fun) {
     let fontLoader = new FontLoader();
-    let fonts = ['Anonymous', 'Balgin Display', 'HelveticaNeueLT Std Med Ext_Bold'];
+    let fonts = ['Anonymous', 'Anonymous', 'Anonymous'];
     for (let text of messages) {
         let obj = text;
         if (add) {
