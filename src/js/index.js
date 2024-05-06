@@ -182,7 +182,7 @@ function createPyramid() {
  */
 function createFont(messages, add = false, fun) {
     let fontLoader = new FontLoader();
-    let fonts = ['Balgin Display', 'Balgin Display', 'Balgin Display'];
+    let fonts = ['HelveticaNeueLT Std Med Ext_Bold', 'HelveticaNeueLT Std Med Ext_Bold', 'HelveticaNeueLT Std Med Ext_Bold'];
     for (let text of messages) {
         let obj = text;
         if (add) {
